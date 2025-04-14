@@ -1,9 +1,13 @@
-```markdown
 # 🧾 Odoo Accounting MCP Server
 
 This is a simplified, non-production-ready Model Context Protocol (MCP) server designed for experimental integration with **Odoo Accounting** via XML-RPC. Specifically tailored for use with [Claude Desktop](https://claude.ai), this project focuses on enabling AI tools to query and analyze **account journal entries** for audit purposes. While it allows interaction with Odoo accounting data, its current scope is limited to this specific use case and is not intended for production environments. Future exploration might consider expanding to other accounting-related data, such as invoices, depending on the outcomes of the initial focus.
 
 ---
+
+### 🔧 Example: Claude Detecting MCP Tool
+
+![MCP Tool Preview](assets/mcp_tool_preview.png)
+
 
 ## 🚀 Key Features
 
@@ -21,10 +25,8 @@ Follow these steps to set up and run the Odoo Accounting MCP Server:
 
 ### 1. Clone the Repository
 
-Begin by cloning the repository to your local machine:
-
 ```bash
-git clone [https://github.com/your-username/odoo-accounting-mcp.git](https://github.com/your-username/odoo-accounting-mcp.git)
+git clone https://github.com/your-username/odoo-accounting-mcp.git
 cd odoo-accounting-mcp
 ```
 
@@ -32,7 +34,7 @@ cd odoo-accounting-mcp
 
 Create a `.env` file in the project's root directory and populate it with your Odoo connection details:
 
-```
+```ini
 ODOO_URL=http://localhost:8069
 ODOO_DB=your_db_name
 ODOO_USERNAME=your_odoo_user_name
@@ -41,21 +43,23 @@ ODOO_PASSWORD=your_odoo_password
 
 ### 3. Set Up Virtual Environment
 
-It's recommended to use a virtual environment to manage project dependencies. Create and activate one using the following commands:
+It's recommended to use a virtual environment to manage project dependencies:
 
-```python
+```bash
 python -m venv .venv
 ```
 
+Activate it:
+
 ```bash
-.\.venv\Scripts\activate
+.\.venv\Scripts ctivate
 ```
 
 ### 4. Install Dependencies
 
 Install the required Python packages from the `requirements.txt` file:
 
-```python
+```bash
 python -m pip install -r requirements.txt
 ```
 
@@ -63,7 +67,7 @@ python -m pip install -r requirements.txt
 
 Start the MCP server using the main Python script:
 
-```python
+```bash
 python main.py
 ```
 
@@ -105,4 +109,3 @@ Update your `claude_desktop_config.json` file with the following configuration (
 ## 📜 License
 
 This project is licensed under the MIT License.
-```
